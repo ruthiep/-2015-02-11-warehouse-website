@@ -1,0 +1,39 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #fff9ea; 
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #1f35ae;
+}
+
+p {
+  text-align: center;
+  margin: 5px;
+  border-style: dotted color: blue; 
+}
+
+ul {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: 32px;
+  padding: 15px;
+}
+
+li {
+  font-weight: normal;
+  line-height: 150%;
+  font-size: 20px;
+  color: rgb(255, 0, 255);
+}
+
+#grad1 {
+    border: 20px;
+    height: 200px;
+    background: -webkit-linear-gradient(left, red, pink, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, red, pink, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, red, pink, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, red, pink, orange); /* Standard syntax (must be last) */
+}
