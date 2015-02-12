@@ -1,4 +1,14 @@
 <form action="create_cat">
+  
+  Here's what you've got so far:
+  
+  <% @cats.each do |cat| %>
+   <p>
+      <%= cat.id %>
+      <%= cat.name %>
+      
+    </p>
+  <% end %>
   Please enter in the following information for the new category:
   <ul>
    

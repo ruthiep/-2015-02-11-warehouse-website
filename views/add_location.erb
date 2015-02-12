@@ -1,4 +1,13 @@
 <form action="create_loc">
+  
+  <p>Here are your locations in the database:</p>
+  
+  <% @locs.each do |loc| %>
+   <p>
+      <%= loc.id %>
+      <%= loc.name %>
+    </p>
+    <% end %>
   Please enter in the following information for the new location:
   <ul>
    

@@ -1,4 +1,10 @@
-<h2>This location has been successfully deleted.</h2>
+<h2>This product has been successfully deleted.</h2>
+ Here is the new products list:
 
-
-<!-- <% @delete = params[:id]%> -->
+  <% @prods.each do |p| %>
+   <p>
+      <%= p.id %>
+      <%= p.name %>
+      
+    </p>
+  <% end %>

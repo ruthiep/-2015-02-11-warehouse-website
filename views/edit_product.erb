@@ -13,32 +13,3 @@
   <input type="submit" value="Submit">
     
 </form>
-
-
-  def edit_product
-    product_list
-    puts "ENTER PRODUCT TO EDIT(BY NUMBER)"
-    product_to_edit = gets.to_i
-    product = Product.find("products", product_to_edit)
-    product.display_attributes
-    raw_field = ""
-    puts "ENTER FIELD TO EDIT"
-    raw_field = gets.chomp
-    until raw_field.downcase == "done"
-      puts "ENTER CHANGE"
-      raw_change = gets.chomp
-      verify_edit(product, raw_field, raw_change)
-      puts "ENTER ANOTHER FIELD TO EDIT(TYPE DONE TO FINISH)"
-      raw_field = gets.chomp
-    end
-    puts "PRESS 1 TO SAVE CHANGES, PRESS ANYTHING ELSE TO CANCEL"
-    verify = gets.chomp
-    if verify == "1"
-      product.save("products")
-      puts "CHANGES SAVED"
-      puts "HERE IS THE UPDATED PRODUCT INFORMATION:\n"
-      product.display_attributes
-    else puts "PROCESS CANCELLED"
-    end
-  end
-  

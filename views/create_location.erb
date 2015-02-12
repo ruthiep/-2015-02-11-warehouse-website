@@ -1,1 +1,8 @@
 <h2>Your new location has been successfully submitted</h2>
+ <p>Here are your locations in the database:</p>
+  <% @locs.each do |loc| %>
+   <p>
+      <%= loc.id %>
+      <%= loc.name %>
+    </p>
+    <% end %>

@@ -1,1 +1,8 @@
-<h2>Your product has been successfully submitted</h2>
+<h2>Your product has been successfully submitted.</h2>
+<h2>You now have: </h2>
+
+  <% @products.each do |product| %>
+ <p>
+  <%= product.id %>  <%= product.name %>  <%=product.cost %><br>
+ </p>
+<% end %>

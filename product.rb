@@ -36,10 +36,10 @@ class Product
     @serial_number = options["serial_number"]
     @name = options["name"]
     @description = options["description"]
-    @cost = options["cost"]
-    @quantity = options["quantity"]
-    @location_id = options["location_id"]
-    @category_id = options["category_id"]
+    @cost = options["cost"].to_i
+    @quantity = options["quantity"].to_i
+    @location_id = options["location_id"].to_i
+    @category_id = options["category_id"].to_i
   end
      
 end#classend

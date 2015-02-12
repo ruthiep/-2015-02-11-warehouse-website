@@ -1,0 +1,19 @@
+<form action="confirm_loc_delete">
+  <% @locs.each do |l| %>
+   <p>
+      <%= l.id %>
+      <%= l.name %>
+      
+    </p>
+  <% end %>
+  
+  Please enter the id of the location you wish to delete:
+  <ul>
+    <li><input type = "text" name = "table" value = "locations"</li>
+    <li><input type = "number" name = "id">id</li>
+  </ul>
+  
+  <input type="submit" value="Submit">  
+  <!-- send to add_product to validate -->
+    
+</form>

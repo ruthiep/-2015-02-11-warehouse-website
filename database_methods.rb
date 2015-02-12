@@ -232,4 +232,14 @@ module ClassMethods
     attributes
   end
   
+  def all(table)
+      locations = []
+      results = DATABASE.execute("SELECT * FROM #{table}")
+      results.each do |result|
+        locations << self.new(result) if result != nil
+      end
+      locations
+  
+  end
+  
 end#module_end
