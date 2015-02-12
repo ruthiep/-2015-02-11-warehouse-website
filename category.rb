@@ -9,7 +9,7 @@
 #
 # Public Methods:
 # .delete_record
-# #
+# #mate
 # 
 
 class Category

@@ -149,8 +149,12 @@ module ClassMethods
   # State changes:
   # Values are deleted from the database.
   
-  def delete_record(table, id_to_remove)
-    DATABASE.execute("DELETE FROM #{table} WHERE id = #{id_to_remove}")
+  # def delete_record(table, id_to_remove)
+#     DATABASE.execute("DELETE FROM #{products} WHERE id = #{id_to_remove}")
+#   end
+  
+  def delete_record(table, id)
+    DATABASE.execute("DELETE FROM #{table} WHERE id = #{id}")
   end
   
   # Public: .search_where

@@ -1,0 +1,27 @@
+<form action="confirm_prod_delete">
+  Please enter the table and id of the product you wish to delete:
+  <ul>
+    <li><input type = "text" name = "table">table</li>
+    <li><input type = "number" name = "id">id</li>
+  </ul>
+  
+  <input type="submit" value="Submit">  
+  <!-- send to add_product to validate -->
+    
+</form>
+
+
+  <!-- def delete_product
+     product_list
+     puts "ENTER PRODUCT ID TO DELETE"
+     product_to_delete = gets.to_i
+     puts "ARE YOU SURE YOU WANT TO DO THIS?"
+     puts "PRESS 1 TO CONTINUE, PRESS ANYTHING OTHER THAN 1 TO CANCEL DELETION"
+     verify = gets.chomp
+     if verify == "1"
+       Product.delete_record("products", product_to_delete)
+       puts "PRODUCT ##{product_to_delete} DELETED"
+       product_list
+     else puts "PROCESS CANCELLED"
+     end
+  end  -->
