@@ -201,7 +201,7 @@ module ClassMethods
   #
   # State changes:
   # none.
-    
+  
   def find(table, id_to_find)
     result = DATABASE.execute("SELECT * FROM #{table} WHERE id = #{id_to_find}")
     record_details = result[0]

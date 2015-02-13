@@ -58,13 +58,20 @@ get "/create_cat" do
   erb :create_category, :layout=> :boilerplate
 end
 
-get "/delete_cat"  do
-   @cats = Category.all("categories")
+# before "/delete_cat" do
+#   @prods = Product.search_where("products", "category_id", params["id"])
+#   if @prods != []
+#     request.path_info = "/error"
+#   end
+# end
+
+get "/delete_cat" do
+   @cats = Category.find(params["table"], params["id"])
   erb :delete_category, :layout=> :boilerplate
 end
 
 get "/confirm_cat_delete" do
-  Category.delete_record(params)
+  Category.delete_record(params["id"])
   @cats = Category.all("categories")
   erb :confirm_cat_delete, :layout=> :boilerplate
 end
@@ -81,13 +88,25 @@ get "/create_loc" do
   erb :create_location, :layout=> :boilerplate
 end
 
-get "/delete_loc"  do
-   @locs = Location.all("locations")
+# before "/confirm_delete_location" do
+#   @prods = Product.search_where("products", "location_id", params["id"])
+#   if @prods != []
+#     request.path_info = "/error"
+#   end
+# end
+
+get "/delete_loc" do
+  @loc_to_delete=Location.find(params["table"], params["id"])  
   erb :delete_location, :layout=> :boilerplate
 end
 
-get "/cat_delete" do
-  Location.delete_record(params)
+get "/confirm_delete_location" do
+  Location.delete_record(params["id"])
   @locs = Location.all("locations")
   erb :confirm_loc_delete, :layout=> :boilerplate
+end
+
+
+get "/error" do
+  erb :error
 end
